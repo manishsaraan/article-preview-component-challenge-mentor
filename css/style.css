@@ -95,3 +95,50 @@ body {
   justify-content: center;
   cursor: pointer;
 }
+
+.tooltip-content {
+  display: flex;
+  align-items: center;
+}
+
+.tooltip-content img {
+  width: 15px;
+  margin: 0 5px -2px 5px;
+}
+
+.tooltip-content span {
+  margin: 0 5px;
+}
+/* tooltip css goes here */
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--very-dark-grayish-blue);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 20px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -90px;
+}
+
+.tooltip .tooltiptext::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--very-dark-grayish-blue) transparent transparent
+    transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* tooltip css ends here */
