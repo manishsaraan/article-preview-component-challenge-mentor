@@ -1,27 +1,29 @@
-document.getElementById('share').addEventListener('click', function (e) {
+var SHARE_BUTTON = document.getElementById('share');
+var DESKTOP_TOOLTIP = document.getElementById('desktop-tooltip');
+var SHARE_MOBILE = document.getElementById('share-mobile');
+var USER = document.getElementById('user');
+
+SHARE_BUTTON.addEventListener('click', function (e) {
   e.stopPropagation();
   if (window.screen.width > 600) {
-    var tooltip = document.getElementById('desktop-tooltip');
-    tooltip.style.visibility = 'visible';
+    DESKTOP_TOOLTIP.style.visibility = 'visible';
   } else {
-    var tooltip = document.getElementById('share-mobile');
-    var user = document.getElementById('user');
-    tooltip.style.display = 'flex';
-    user.style.display = 'none';
+    SHARE_MOBILE.style.display = 'flex';
+    USER.style.display = 'none';
   }
 });
 
-document.getElementById('share-mb-min').addEventListener('click', function (e) {
-  e.stopPropagation();
-  var tooltip = document.getElementById('share-mobile');
-  var user = document.getElementById('user');
-  tooltip.style.display = 'none';
-  user.style.display = 'flex';
-});
+document
+  .getElementById('share-btn-mobile')
+  .addEventListener('click', function (e) {
+    e.stopPropagation();
+
+    SHARE_MOBILE.style.display = 'none';
+    USER.style.display = 'flex';
+  });
 
 document.body.addEventListener('click', function (e) {
-  if (e.target !== document.getElementById('share')) {
-    var tooltip = document.getElementById('desktop-tooltip');
-    tooltip.style.visibility = 'hidden';
+  if (e.target !== SHARE_BUTTON) {
+    DESKTOP_TOOLTIP.style.visibility = 'hidden';
   }
 });

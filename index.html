@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Frontend Mentor | Article preview component</title>
   </head>
-  <body>
+  <body class="flex">
     <main class="container">
-      <div class="content">
+      <div class="content flex">
         <section class="left"></section>
         <section class="right">
           <h1>
@@ -28,20 +28,20 @@
             felt slightly bare and uninviting. I've got some simple tips to help
             you make any room feel complete.
           </p>
-          <div id="user" class="user">
+          <div id="user" class="user flex">
             <img
               class="user-image"
               src="./images/avatar-michelle.jpg"
               alt="michelle"
             />
-            <div class="user-info">
+            <div class="flex user-info">
               <span>Michelle Appleton</span>
               <small>28 Jun 2020</small>
             </div>
-            <div id="share" class="share tooltip">
+            <div id="share" class="flex align-center  share tooltip">
               <img src="./images/icon-share.svg" alt="share" />
               <span id="desktop-tooltip" class="tooltiptext">
-                <div class="tooltip-content">
+                <div class="flex align-vertically tooltip-content">
                   <span>SHARE</span>
                   <a href="#">
                     <img src="./images/icon-facebook.svg" alt="facebook"
@@ -58,9 +58,9 @@
           </div>
           
         </section>
-        <section id="share-mobile" class="share-mobile">
-        <div class="share-mobile-content">
-          <div class="share-content">
+        <section id="share-mobile" class="flex align-center share-mobile">
+        <div class="flex align-vertically share-mobile-content">
+          <div class="flex align-vertically share-content">
             <span>SHARE</span>
             <a href="#">
               <img src="./images/icon-facebook.svg" alt="facebook"
@@ -72,7 +72,7 @@
               <img src="./images/icon-twitter.svg" alt="twitter"
             /></a>
           </div>
-          <div id="share-mb-min" class="share tooltip">
+          <div id="share-btn-mobile" class="flex  align-center   share tooltip">
             <img src="./images/icon-share.svg" alt="share" />
           </div>
       </div>
