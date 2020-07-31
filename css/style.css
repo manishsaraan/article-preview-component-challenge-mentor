@@ -107,6 +107,33 @@ body {
 .tooltip-content span {
   margin: 0 5px;
 }
+
+.share-mobile {
+  background: var(--very-dark-grayish-blue);
+  position: relative;
+  height: 60px;
+  display: none;
+}
+
+.share-mobile-content {
+  width: 80%;
+  height: 100%;
+  position: relative;
+}
+
+.share-mobile-content span {
+  color: var(--light-grayish-blue);
+}
+
+.share-mobile-content a {
+  margin: 0 10px -3px 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 30px;
+}
+
 /* tooltip css goes here */
 
 .tooltip .tooltiptext {
@@ -133,10 +160,6 @@ body {
   border-style: solid;
   border-color: var(--very-dark-grayish-blue) transparent transparent
     transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  /* visibility: visible; */
 }
 
 /* tooltip css ends here */
@@ -167,25 +190,4 @@ body {
   .share {
     right: 0;
   }
-}
-
-.share-mobile {
-  background: var(--very-dark-grayish-blue);
-  position: relative;
-  height: 60px;
-  display: none;
-}
-
-.share-mobile-content {
-  width: 80%;
-  height: 100%;
-  position: relative;
-}
-
-.share-mobile-content span {
-  color: var(--light-grayish-blue);
-}
-
-.share-mobile-content a {
-  margin: 0 10px -3px 10px;
 }
